@@ -70,12 +70,37 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  // Solution code here... I referred to ChatGPT to troubleshoot my previous attempt
+  let upperCase = [];
+  word.forEach((value) => {
+    upperCase.push(value.toUpperCase() + '!');
+  });
+  return upperCase;
 };
 
 const speaker = (words, callback) => {
   // Solution code here...
+  let newArray = callback(words);
+  return newArray;
 };
+// this was my code prior to asking ChatGPT to troubleshoot
+// const greeting = (word) => {
+//   // Solution code here...
+//   let upperCase = [];
+//   word.forEach((value)) => {
+//     upperCase.push(word.toUpperCase() + '!');
+
+//   }
+// };
+
+// const speaker = (words, callback) => {
+//   // Solution code here...
+//   let newArray = [];
+//   arr.forEach ((value) => {
+//     newArray.push()
+//   })
+//   return newArray;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -94,13 +119,31 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  // Solution code here... I referred to ChatGPT to troubleshoot my previous attempt
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
+// this was my code prior to asking ChatGPT to troubleshoot
+// const addValues = (arr, value) => {
+//   // Solution code here...
+//   let newArray = [];
+//   arr.forEach((value) => newArray.push()
+//   );
+// };
+
+// const addNumbers = (num, arr, times, callback) => {
+//   // Solution code here...
+//   let newArray = callback(num, arr, times);
+//   return newArray;
+// };
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
@@ -120,9 +163,21 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  // Solution code here... I referred to ChatGPT to troubleshoot my code
+  let newArray = [];
+  availableItems.forEach((value) => {
+    if (value.available) {
+      newArray.push(value.name);
+    }
+  });
+  return newArray;
 };
 
+// this was my code prior to asking ChatGPT to troubleshoot
+// let newArray = [];
+// availableItems.forEach((value, true) => newArray.push());
+// return newArray;
+// };
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
 
