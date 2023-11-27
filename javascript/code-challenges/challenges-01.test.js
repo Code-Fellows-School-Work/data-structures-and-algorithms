@@ -27,7 +27,13 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
+  let newArray = [];
+  arr.forEach ( function (value, index){
+    newArray.push(value + '!');
+  });
+  return newArray;
 };
+  // arr.forEach (value, index) => newArray.push(value + '!');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -38,8 +44,20 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  // Solution code here... I referred to ChatGPT to troubleshoot my previous attempt
+  let newArray = [];
+  arr.forEach((value) => {
+    newArray.push(value.toUpperCase());
+  });
+  return newArray;
 };
+  //this was my code prior to asking ChatGPT to troubleshoot
+  // let newArray = [];
+  // arr.forEach ( function (value, index){
+  //   newArray.push(value.toUpperCase());
+  // });
+  // return newArray;
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
