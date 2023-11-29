@@ -24,6 +24,7 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
+  return arr.filter ((value) => {return typeof value === 'number';} );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,6 +37,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  return arr.filter ((value) => {return value.includes('and');});
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +50,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  return arr.filter ((value) => {return value % 2;});
 };
 
 /* ------------------------------------------------------------------------------------------------
