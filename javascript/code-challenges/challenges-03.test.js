@@ -1,5 +1,7 @@
 'use strict';
 
+// worked with Chris Acosta to complete this lab challenge
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
