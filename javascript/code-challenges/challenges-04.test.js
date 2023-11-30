@@ -55,8 +55,9 @@ Prove that the original people, stuff, and state are unchanged.
 
 const setState = (arr) => {
   // Solution code here...
-  let newArray = {...originalPeople, ...originalStuff};
-  return newArray;
+  let state = {people, stuff};
+  let newState = {...state};
+  return newState;
 };
 
 
