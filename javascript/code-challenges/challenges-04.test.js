@@ -77,9 +77,6 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const newState = (arr) => {
-  // Solution code here...
-  // let state = {...people, ...stuff};
-  // let newState = { ...state };
   let newState = {
     people: [...people],
     stuff: {...stuff}
