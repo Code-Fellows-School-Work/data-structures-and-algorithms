@@ -84,8 +84,6 @@ const newState = (arr) => {
   newState.stuff.cars = [...newState.stuff.cars, 'Ford'];
   newState.stuff.toothbrush = 'brand new';
   newState.stuff.toys = stuff.toys + 1;
-  console.log(newState);
-  console.log(people, stuff);
   return newState;
 };
 
