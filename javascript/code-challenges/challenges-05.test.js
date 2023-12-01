@@ -129,6 +129,8 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  // let extract = 'house';
+  houses.push(...arr.map(obj => obj.house));
   return houses;
 };
 
