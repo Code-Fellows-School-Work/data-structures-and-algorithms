@@ -24,12 +24,6 @@ In the addPeople function, use spread and destructuring assignments to:
 
 Prove that the original people array is unchanged
 
-Using spread and destructuring assignment, create a new object called newStuff, which is a copy of the stuff object, with a new car added to the end of the cars array within it
-Create a state object with keys of people and stuff that contain the people and stuff data.
-Do this using object destructuring assignment
-Using spread and destructuring assignments, create a new object called newSate, repeating the newPeople and newStuff steps above but directly within the people and stuff nodes of the state object (don't just spread in newPeople and newStuff)
-Ensure that the original people, stuff, and state are unchanged.
-
 ------------------------------------------------------------------------------------------------ */
 
 const addPeople = (arr) => {
@@ -48,16 +42,15 @@ In the setSate function, use spread and destructuring assignments to:
 
 Ensure that the original people array and stuff objects are unchanged
 
-Using spread and destructuring assignments, create a new object called newSate, repeating the newPeople and newStuff steps above but directly within the people and stuff nodes of the state object (don't just spread in newPeople and newStuff)
-Prove that the original people, stuff, and state are unchanged.
-
 --------------------------------------------------------g---------------------------------------- */
 
 const setState = (arr) => {
   // Solution code here...
-  let state = {people, stuff};
-  let newState = {...state};
-  return newState;
+  let state = {
+    people: [...people],
+    stuff: { ...stuff }
+  };
+  return state;
 };
 
 
@@ -77,15 +70,21 @@ Ensure that the original people array and stuff objects are unchanged
 ------------------------------------------------------------------------------------------------ */
 
 const newState = (arr) => {
+//   let newState = {
+//     people: [...people],
+//     stuff: {...stuff}
+//   }
+//   newState.stuff.cars = [...newState.stuff.cars, 'Ford'];
+//   newState.stuff.toothbrush = 'brand new';
+//   newState.stuff.toys = stuff.toys + 1;
+//   return newState;
+// };
   let newState = {
     people: [...people],
-    stuff: {...stuff}
+    stuff: {...stuff, toys:stuff.toys + 1, toothbrush: 'brand new', cars: [...stuff.cars, 'Ford']}
   }
-  newState.stuff.cars = [...newState.stuff.cars, 'Ford'];
-  newState.stuff.toothbrush = 'brand new';
-  newState.stuff.toys = stuff.toys + 1;
   return newState;
-};
+  };
 
 
 /* ------------------------------------------------------------------------------------------------
