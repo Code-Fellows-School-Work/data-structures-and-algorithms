@@ -32,7 +32,7 @@ const courseInfo = {
 
 const getCourseKeys = (obj) => {
   // Solution code here...
-  let keys = Object.keys(courseInfo);
+  let keys = Object.keys(obj);
   return keys;
 };
 
@@ -69,6 +69,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 ------------------------------------------------------------------------------------------------ */
 
+// Used ChatGPT to help write this function
 const updateNumbers = (obj) => {
   // Solution code here...
   let newArray = Object.entries(obj).map(([key, value]) => `${key}: ${value}`);
@@ -129,7 +130,6 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  // let extract = 'house';
   houses.push(...arr.map(obj => obj.house));
   return houses;
 };
@@ -146,6 +146,7 @@ hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
+// used ChatGPT to help write this function
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
   let findChildren = arr.find(obj => obj.name === character);
