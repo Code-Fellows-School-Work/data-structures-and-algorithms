@@ -26,6 +26,11 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+  let sum = arr.reduce((accumulator, value, index) => {
+    accumulator = accumulator + value;
+    return accumulator;
+  }, 0);
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -42,6 +47,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+  let sum = arr.reduce((accumulator, value) => {
+    return accumulator + value.purchasePrice;
+  }, 0);
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,8 +61,10 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
+// used chatGPT to help solve this challenge
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  return arr.reduce((count) => count + 1, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,8 +123,14 @@ let starWarsData = [{
   gender: 'female'
 }];
 
+// used ChatGPT to help solve this challenge
 const returnNames = (arr) => {
   // Solution code here...
+  let names = arr.reduce((accumulator, value) => {
+    accumulator.push(value.name);
+    return accumulator;
+  }, []);
+  return names;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,6 +143,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let reverse = str.split('').reduce((accumulator, value) => {
+    return value + accumulator;
+  }, '');
+  return reverse;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -290,7 +311,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should add the values of an array', () => {
     expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
     expect(addValues([])).toStrictEqual(0);
