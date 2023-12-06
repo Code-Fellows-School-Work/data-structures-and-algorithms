@@ -38,6 +38,7 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
+  return arr.slice()
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,9 +46,10 @@ CHALLENGE 3
 
 Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
 ------------------------------------------------------------------------------------------------ */
-
+// Used ChatGpt to modify and correct my attempted code
 const joinArray = (arr) => {
   // Solution code here...
+  return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
