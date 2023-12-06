@@ -51,10 +51,11 @@ Write a function called sortNumbers that takes an array of numbers and sorts the
 
 HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
-
+// used ChatGPT to troubleshoot my original code
 const sortNumbers = (arr) => {
   // Solution code here...
-  arr.sort((a, b) => b - a);
+  arr.sort((a, b) => a - b);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,6 +68,8 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 
 const sortBackwards = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => b - a);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
