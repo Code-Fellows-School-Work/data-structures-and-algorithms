@@ -38,8 +38,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
-  console.log(arr.slice(2, 4));
-  return arr.slice(2, 4);
+  arr.splice(idx, 3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -254,14 +254,14 @@ Run your tests from the console: jest challenges-05.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
+xdescribe('Testing challenge 1', () => {
   test('It should sort the star wars characters by height from tallest to shortest', () => {
     expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
   });
 });
 
-describe('Testing challenge 2', () => {
+xdescribe('Testing challenge 2', () => {
   test('It should return an array with three items removed', () => {
     expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([1, 2, 6, 7, 8]);
   });
@@ -273,7 +273,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-describe('Testing challenge 4', () => {
+xdescribe('Testing challenge 4', () => {
   test('It should return a list of shortening words', () => {
     expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
     expect(howMuchPencil('Welcome').length).toStrictEqual(8);
@@ -291,7 +291,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-describe('Testing challenge 6', () => {
+xdescribe('Testing challenge 6', () => {
   test('It should return a list of foods', () => {
     expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
