@@ -38,10 +38,10 @@ Write a function called sortNames that takes an array of names and sorts them al
 
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
-// used ChatGPT to learn localeCompare to compare strings
+// received help from Chris to solve this
 const sortNames = (arr) => {
   // Solution code here...
-  arr.sort((a, b) => a.localeCompare(b));
+  arr.sort();
   return arr;
 };
 /* ------------------------------------------------------------------------------------------------
@@ -81,10 +81,10 @@ In this alphabetization, capital letters come before lower case letters.
 
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
-
+// received help from Chris to solve this
 const alphabetize = (arr) => {
   // Solution code here...
-  arr.sort((a, b) => a.localeCompare(b));
+  arr.sort();
   return arr;
 };
 
