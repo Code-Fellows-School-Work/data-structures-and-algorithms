@@ -35,7 +35,7 @@ CHALLENGE 2
 
 Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
 ------------------------------------------------------------------------------------------------ */
-
+// solved with help from Chris A.
 const removeThree = (idx, arr) => {
   // Solution code here...
   arr.splice(idx, 3);
@@ -65,13 +65,12 @@ Your function should use slice within a loop and return an array of each success
 For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
-// Used ChatGPT to start off but still could not figure it out
+// solved with help of Chris A
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  for (let i = 0; i < str.length; i++) {
-    let sharpen = str.slice(i, i++);
-    result.push(sharpen);
+  for (let i = 0; i <= str.length; i++) {
+    result.push(str.slice(i));
   }
   return result;
 };
@@ -134,6 +133,10 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  for (let i = 0; i < recipe.length; i++){
+    // finds index with empty string
+    let spaceIndex = recipe[i].indexOf(' ');
+  }
   return result;
 };
 
@@ -267,7 +270,7 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-describe('Testing challenge 3', () => {
+xdescribe('Testing challenge 3', () => {
   test('It should join an array', () => {
     expect(joinArray(['hello', '301', 'students'])).toStrictEqual('hello 301 students');
   });
@@ -282,7 +285,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-describe('Testing challenge 5', () => {
+xdescribe('Testing challenge 5', () => {
   test('It should return an array of individual letters', () => {
     expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
     expect(wordsToCharList('Gregor').length).toStrictEqual(6);
@@ -298,7 +301,7 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return a list of foods', () => {
     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
