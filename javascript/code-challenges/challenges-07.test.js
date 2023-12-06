@@ -84,6 +84,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => a.localeCompare(b));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,9 +100,11 @@ Here is an example of the input:
   {name: 'Tote bag', price: 15}
 ];
 ------------------------------------------------------------------------------------------------ */
-
+// used ChatGPT to determine how to use sort for objects
 const sortByPrice = (arr) => {
   // Solution code here...
+  arr.sort((a, b) => a.price - b.price);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
