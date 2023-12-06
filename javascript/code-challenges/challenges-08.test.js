@@ -38,7 +38,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
-  return arr.slice()
+  console.log(arr.slice(2, 4));
+  return arr.slice(2, 4);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,10 +65,14 @@ Your function should use slice within a loop and return an array of each success
 For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
-
+// Used ChatGPT to start off but still could not figure it out
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
+  for (let i = 0; i < str.length; i++) {
+    let sharpen = str.slice(i, i++);
+    result.push(sharpen);
+  }
   return result;
 };
 
@@ -81,6 +86,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return arr.split('');
 };
 
 
