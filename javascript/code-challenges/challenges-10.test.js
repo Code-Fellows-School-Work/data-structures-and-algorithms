@@ -55,6 +55,7 @@ For example:
 
 return: 35
 ------------------------------------------------------------------------------------------------ */
+// Chris A. helped me solve this one
 const totalSum = (matrix) => {
   // Solution code here...
   let sum = 0;
@@ -91,10 +92,21 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
+// Received help from Chris A. and ChatGPT
 const grandTotal = (stores) => {
   // Solution code here...
+  let hourlyTotal = [];
 
+  for (let i = 0; i < hoursOpen.length; i++){
+    let sum = 0;
+    for (let j = 0; j < stores.length; j++){
+      sum += stores[j][i];
+    }
+    hourlyTotal.push(sum);
+  }
+  return hourlyTotal;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -250,14 +262,14 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-describe('Testing challenge 3', () => {
+xdescribe('Testing challenge 3', () => {
   test('It should return the total sum', () => {
     expect(totalSum([[13,24,24,2], [2,5,6], [2,3]])).toStrictEqual(81);
     expect(totalSum([])).toStrictEqual(0);
   });
 });
 
-describe('Testing challenge 4', () => {
+xdescribe('Testing challenge 4', () => {
   test('It should add the hourly totals array', () => {
     expect(grandTotal(cookieStores)).toStrictEqual([88, 153, 252, 286, 139, 161, 145, 232, 276, 207, 161, 169]);
   });
