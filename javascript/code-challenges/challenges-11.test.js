@@ -30,7 +30,7 @@ Write a function named findHappiness that takes in an array of strings and retur
 
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this is great :)', ':)))))']
 ------------------------------------------------------------------------------------------------ */
-
+// tried to use map, but I learned from ChatGPT to use filter instead
 const findHappiness = (arr) => {
   // Solution code here...
   return arr.filter((str) => str.includes(':)'));
@@ -46,6 +46,7 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  return arr.filter ((str) => str.includes('()'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,9 +66,10 @@ CHALLENGE 6
 
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
-
+// I tried to use .map, but learned from chatGPT that .every will check all strings
 const allHappy = (arr) => {
   // Solution code here...
+  return arr.every ((str) => str.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
