@@ -52,10 +52,12 @@ You may want to use filter, map, or reduce for this problem, but are not require
 
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
-
+// used ChatGPT to help write the logic
 const totalSum = (input) => {
   // Solution code here...
-  let sum = input.map(array => array.reduce((acc, currentValue) => ))
+  let sum = input.map(array => array.reduce((acc, currentValue) => acc + currentValue, 0));
+  let grandTotal = sum.reduce((acc, currentValue) => acc + currentValue, 0);
+  return grandTotal;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,8 +138,14 @@ let starWarsData = [{
   gender: 'female'
 }];
 
+// solved with ChatGPT help
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let gender = data.filter( data => data.gender === 'male' || data.gender === 'female'
+  );
+  let name = gender.map(data => data.name);
+  let results = name.join(' and ');
+  return results;
 };
 
 /* ------------------------------------------------------------------------------------------------
