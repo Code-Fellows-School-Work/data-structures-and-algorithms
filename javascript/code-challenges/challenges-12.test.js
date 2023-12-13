@@ -153,9 +153,18 @@ CHALLENGE 6
 
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height.
 ------------------------------------------------------------------------------------------------ */
-
+// My original code was no where close.. so ChatGPT solved this for me
 let findShortest = (data) => {
   // Solution code here...
+  const shortestCharacter = data.reduce((shortest, current) => {
+    if (current.height !== 'unknown' && current.height !== 'n/a') {
+      if (parseInt(current.height) < parseInt(shortest.height)); {
+        return current;
+      }
+    }
+    return shortest;
+  }, data[0]);
+  return shortestCharacter.name;
 };
 
 /* ------------------------------------------------------------------------------------------------
