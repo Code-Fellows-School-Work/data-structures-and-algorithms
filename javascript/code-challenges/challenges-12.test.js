@@ -71,9 +71,19 @@ This function should then raise 2 to the power of the resulting numbers, returni
 
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
-
+// I was no where close on this one.. so ChatGPT solved it
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  const isDivisibleByFive = (num) => typeof num === 'number' && num % 5 === 0;
+  const processSubArray = (subArray) => {
+    const filteredArray = subArray.filter(isDivisibleByFive);
+    const poweredArray = filteredArray.map((num) => Math.pow(2, num));
+    return poweredArray;
+  };
+
+  const result = input.map(processSubArray);
+
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,7 +168,7 @@ let findShortest = (data) => {
   // Solution code here...
   const shortestCharacter = data.reduce((shortest, current) => {
     if (current.height !== 'unknown' && current.height !== 'n/a') {
-      if (parseInt(current.height) < parseInt(shortest.height)); {
+      if (parseInt(current.height) < parseInt(shortest.height)) {
         return current;
       }
     }
