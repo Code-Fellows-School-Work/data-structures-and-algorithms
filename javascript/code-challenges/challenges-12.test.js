@@ -33,9 +33,14 @@ Note: You might need to use the same method more than once.
 
 For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
-
+// Used ChatGPT to troubleshoot my original logic
 const count = (target, input) => {
   // Solution code here...
+  let amount = input.reduce((acc, currentValue) => {
+    let currentValueCount = currentValue.reduce((secondAcc, num) => (num === target ? secondAcc + 1: secondAcc), 0);
+    return acc + currentValueCount;
+  }, 0);
+  return amount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,6 +55,7 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  let sum = input.map(array => array.reduce((acc, currentValue) => ))
 };
 
 /* ------------------------------------------------------------------------------------------------
