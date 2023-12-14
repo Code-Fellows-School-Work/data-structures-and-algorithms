@@ -119,9 +119,12 @@ Write a function named isCapitalized that takes in a string. This function shoul
 
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
-
+// used ChatGPT to solve this. I did not realize I needed extra logic beyond the regex expressions
 const isCapitalized = (str) => {
   // Solution code here...
+  let regex = /\b[A-Z][a-z]*\b/g;
+  let matches = str.match(regex);
+  return matches || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -129,9 +132,12 @@ CHALLENGE 6
 
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
-
+// also used ChatGPT to solve this
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let regex = /^[A-J]/i;
+  let result = arr.filter(city => regex.test(city));
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
