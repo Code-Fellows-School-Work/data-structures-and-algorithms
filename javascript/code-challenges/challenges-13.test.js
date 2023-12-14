@@ -92,9 +92,11 @@ For example:
 'h3llo world' returns true
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
-
+// used ChatGPT to solve why the code didn't work. the CF Regex Overview for the numbers section is missing the closing /
 const isNum = (input) => {
   // Solution code here...
+  let regex = /[0-9]/;
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
