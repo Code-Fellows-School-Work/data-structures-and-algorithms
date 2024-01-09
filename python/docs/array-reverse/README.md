@@ -1,11 +1,11 @@
 # Challenge Title
-Write a function which takes an array as an argument and returns an array with elements in reversed order (without using built-in methods)
+<!-- Description of the challenge -->
 
 ## Whiteboard Process
-[Array Reverse Whiteboard](/docs/array-reverse/Array_Reverse.PNG)
+<!-- Embedded whiteboard image -->
 
 ## Approach & Efficiency
-I'm not sure how to answer this yet. 
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-Did not write the code because we will review during class.
+<!-- Show how to run your code, and examples of it in action -->
