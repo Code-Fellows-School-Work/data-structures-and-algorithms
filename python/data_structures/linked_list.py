@@ -67,6 +67,20 @@ class LinkedList:
             current = current.next
 
         return False
+    
+    def insert_after(self, target, value):
+        new_node = Node(value)
+        current = self.head
+
+        while current:
+            if current.value == target:
+                new_node.next = current.next
+                current.next = new_node
+                return True
+            current = current.next
+
+        return False
+
 
 class TargetError:
     pass
