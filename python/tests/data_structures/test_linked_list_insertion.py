@@ -46,3 +46,21 @@ def test_insert_before_first_node():
     current = linked.head
     assert linked.head == current
 
+def test_insert_after_middle():
+    linked = LinkedList()
+    for value in [1, 2, 4, 5]:
+        linked.append(value)
+
+    linked.insert_after(2, 3)
+
+    expected_values = [1, 2, 3, 4, 5]
+
+    current = linked.head
+    for value in expected_values:
+        assert current.value == value
+        current = current.next
+
+def test_append_to_end():
+    linked = LinkedList()
+    linked.append(1)
+    assert linked.head.value == 1
