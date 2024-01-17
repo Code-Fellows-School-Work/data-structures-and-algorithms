@@ -1,41 +1,75 @@
 import pytest
 from data_structures.linked_list import LinkedList
 
+
 def test_exists():
     assert LinkedList
 
-# Used ChatGPT to write test code
-def test_append():
+
+# @pytest.mark.skip("TODO")
+def test_instantiate():
+    assert LinkedList()
+
+
+@pytest.mark.skip("TODO")
+def test_empty_head():
     linked = LinkedList()
-    linked.append(1)
-    assert linked.head.value == 1
+    assert linked.head is None
 
-def test_append_multiple_nodes():
+
+@pytest.mark.skip("TODO")
+def test_populated_head():
     linked = LinkedList()
-    values_to_append = [1, 2, 3, 4, 5]
+    linked.insert("apple")
+    assert linked.head.value == "apple"
 
-    for value in values_to_append:
-        linked.append(value)
 
-    current = linked.head
-    for value in values_to_append:
-        assert current.value == value
-        current = current.next
-        
-def test_insert_before_middle():
-    linked = LinkedList()
-    values_to_insert = [1, 2, 4, 5]
-    target = 4
-    new_value = 3
+@pytest.mark.skip("TODO")
+def test_to_string_empty():
+    linked_list = LinkedList()
 
-    for value in values_to_insert:
-        linked.append(value)
+    assert str(linked_list) == "NULL"
 
-    linked.insert_before(target, new_value)
 
-    expected_values = [1, 2, 3, 4, 5]
-    current = linked.head
+@pytest.mark.skip("TODO")
+def test_to_string_single():
+    linked_list = LinkedList()
 
-    for value in expected_values:
-        assert current.value == value
-        current = current.next
+    linked_list.insert("apple")
+
+    assert str(linked_list) == "{ apple } -> NULL"
+
+
+@pytest.mark.skip("TODO")
+def test_to_string_double():
+    linked_list = LinkedList()
+
+    linked_list.insert("apple")
+
+    assert str(linked_list) == "{ apple } -> NULL"
+
+    linked_list.insert("banana")
+
+    assert str(linked_list) == "{ banana } -> { apple } -> NULL"
+
+
+@pytest.mark.skip("TODO")
+def test_includes_true():
+    linked_list = LinkedList()
+
+    linked_list.insert("apple")
+
+    linked_list.insert("banana")
+
+    assert linked_list.includes("apple")
+
+
+@pytest.mark.skip("TODO")
+def test_includes_false():
+    linked_list = LinkedList()
+
+    linked_list.insert("apple")
+
+    linked_list.insert("banana")
+
+    assert not linked_list.includes("cucumber")
