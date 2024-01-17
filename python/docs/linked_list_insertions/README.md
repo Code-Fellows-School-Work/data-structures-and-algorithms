@@ -8,7 +8,7 @@ Write the following methods for the Linked List class:
 [Linked-List-Insertions](/python/docs/linked_list_insertions/linked-list-insertions.jpg)
 
 ## Approach & Efficiency
-<!-- I'm not sure how to answer this yet.  -->
+O(1) since the algorithm always begins at head, then the larger the list then the longer it will take to search each element in the list.
 
 ## Solution
-<!-- Did not write the code because we will review during class. -->
+Available at: [Linked List](/python/data_structures/linked_list.py)

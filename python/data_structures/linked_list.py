@@ -1,12 +1,25 @@
 # Used JB's class code to help write below code
 class Node:
+    """
+    Class function to create a node in a linked list
+    """
     def __init__(self, value):
         self.value = value
         self.next = None
 
 class LinkedList:
     """
-    Put docstring here
+    Class function to create instance of a linked list. 
+
+    :param: first node in the linked list initialized to none
+
+    :methods:
+        includes: - checks if a value is present
+        insert: - adds a new node with the given value as the head
+        __str__: - string representation of the linked list
+        append: - adds a new node with the given value as the tail
+        insert_before: - adds a new node with a new value before the target value node
+        insert_after: - adds a new node with a new value after the target value node
     """
 
     def __init__(self):
