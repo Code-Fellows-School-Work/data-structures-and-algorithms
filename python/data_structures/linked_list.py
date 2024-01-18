@@ -131,6 +131,4 @@ class LinkedList:
             current = current.next
 
         return current.value
-    
-
 
