@@ -1,5 +1,6 @@
 # Used JB's class code to help write below code
 # Used YouTube video to help with topic understanding https://www.youtube.com/watch?v=JlMyYuY1aXU
+
 class TargetError(Exception):
     def __init__(self, message="Target value not found in the linked list"):
         self.message = message
@@ -32,6 +33,7 @@ class LinkedList:
         append: - adds a new node with the given value as the tail
         insert_before: - adds a new node with a new value before the target value node
         insert_after: - adds a new node with a new value after the target value node
+        insert_kth_from_end: - iterates through linked list and finds tail node, then finds the node with index = k then returns node value
     """
 
     def __init__(self):
