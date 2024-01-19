@@ -53,18 +53,13 @@ class LinkedList:
         self.head = new_node
 
     def __str__(self):
-
-        result = []
         current = self.head
-
-        string_representation = ""
-
+        result = []
         while current:
-            string_representation += f"{{ {current.value} }} -> "
+            result.append(f"{{ {current.value} }} -> ")
             current = current.next
-
-        string_representation += "NULL"
-        return string_representation
+        result.append("NULL")
+        return "".join(result)
     
     def append(self, value):
         new_node = Node(value)
@@ -131,4 +126,27 @@ class LinkedList:
             current = current.next
 
         return current.value
+
+    
+def zip_lists(list1, list2):
+    dummy = Node(None)  # Dummy node to facilitate zipping
+    tail = dummy
+    current1 = list1.head
+    current2 = list2.head
+
+    while current1 or current2:
+        if current1:
+            tail.next = current1
+            tail = tail.next
+            current1 = current1.next
+        if current2:
+            tail.next = current2
+            tail = tail.next
+            current2 = current2.next
+
+    zipped_list = LinkedList()
+    zipped_list.head = dummy.next  # First real node after the dummy
+    return zipped_list
+    
+
 
