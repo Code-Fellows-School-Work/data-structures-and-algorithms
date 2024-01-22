@@ -52,7 +52,7 @@ def test_pop_some():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_pop_until_empty():
     s = Stack()
     s.push("apple")
@@ -66,7 +66,7 @@ def test_pop_until_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_peek():
     s = Stack()
     s.push("apple")

@@ -40,3 +40,13 @@ class Stack:
     def is_empty(self):
         if self.top == None:
             return True
+        else:
+            return "Method not allowed on empty collection"
+    
+    def peek(self):
+        """Peek will only review the node at the top of the stack.
+        Method checks the value of the node on the top and returns that value
+        """
+        value = self.top.value
+        return value
+        
