@@ -85,7 +85,7 @@ def test_peek_empty():
     assert str(e.value) == "Method not allowed on empty collection"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_pop_empty():
     s = Stack()
     with pytest.raises(InvalidOperationError) as e:
