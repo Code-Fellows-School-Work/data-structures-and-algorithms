@@ -1,9 +1,6 @@
 # class Node, Class Stack, __init__, push, pop, is_empty methods created in class with Adam as the instructor
 
-# used ChatGPT to help write error class
-class InvalidOperationError(Exception):
-    def __init__(self, message="Method not allowed on empty collection"):
-        super().__init__(message)
+from data_structures.invalid_operation_error import InvalidOperationError
 
 class Node:
     def __init__(self, value, next=None):
@@ -43,14 +40,15 @@ class Stack:
         return pop_value
     
     def is_empty(self):
+
         return self.top is None
            
     def peek(self):
         """Peek will only review the node at the top of the stack.
         Method checks the value of the node on the top and returns that value
         """
-        if self.is_empty():
-            raise InvalidOperationError()
+        if self.top is None:
+            raise InvalidOperationError("Method not allowed on empty collection")
         
         return self.top.value
         # else:

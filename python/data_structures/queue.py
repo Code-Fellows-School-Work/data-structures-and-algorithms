@@ -1,3 +1,5 @@
+from data_structures.invalid_operation_error import InvalidOperationError
+
 class Node:
     def __init__(self, value, next=None):
         self.value = value
@@ -40,3 +42,16 @@ class Queue:
             self.rear = None
 
         return dequeue_value
+    
+    def is_empty(self):
+        return self.front is None
+    
+    def peek(self):
+        """
+        Peek will only review the node in the front of the queue.
+        Method checks the node in the front and returns that value
+        """
+        if self.is_empty():
+            raise InvalidOperationError()
+        
+        return self.front.value

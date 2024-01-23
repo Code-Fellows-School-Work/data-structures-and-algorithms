@@ -26,7 +26,7 @@ def test_dequeue():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_peek():
     q = Queue()
     q.enqueue("apple")
@@ -37,7 +37,7 @@ def test_peek():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_peek_when_empty():
     q = Queue()
     with pytest.raises(InvalidOperationError):
