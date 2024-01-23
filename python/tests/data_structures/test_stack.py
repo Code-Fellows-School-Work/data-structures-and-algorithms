@@ -76,7 +76,7 @@ def test_peek():
     assert actual == expected
 
 
-# @pytest.mark.skip("TODO")
+@pytest.mark.skip("TODO")
 def test_peek_empty():
     s = Stack()
     with pytest.raises(InvalidOperationError) as e:
