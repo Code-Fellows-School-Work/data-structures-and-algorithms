@@ -28,9 +28,12 @@ class Queue:
             self.rear = new_node
     
     def dequeue(self):
+        """
+        Removes the node from the front of the queue and raises an error is the front is empty
+        """
         if self.front is None:
-            # TODO: raise an error
-            return None
+            raise InvalidOperationError()
+        
         # get the value
         dequeue_value = self.front.value
 
