@@ -3,14 +3,16 @@
 from data_structures.invalid_operation_error import InvalidOperationError
 
 class Node:
+    """
+    Node class representing elements in a stack
+    """
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
 
 class Stack:
     """
-    Pushes a new value onto the top of the stack.
-    Removes the top value from the stack and returns it.
+    Stack class to intitalize and perform operations on a stack data structure
     """
 
     def __init__(self):
@@ -40,7 +42,9 @@ class Stack:
         return pop_value
     
     def is_empty(self):
-
+        """
+        Checks if the stack is empty
+        """
         return self.top is None
            
     def peek(self):

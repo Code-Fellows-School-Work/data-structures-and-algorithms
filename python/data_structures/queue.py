@@ -1,13 +1,16 @@
 from data_structures.invalid_operation_error import InvalidOperationError
 
 class Node:
+    """
+    Node class representing elements in a queue
+    """
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
 
 class Queue:
     """
-    Put docstring here
+    Queue class to intitalize and perform operations on a queue data structure
     """
 
     def __init__(self):
@@ -15,6 +18,9 @@ class Queue:
         self.rear = None
 
     def enqueue(self, value):
+        """
+        Adds new node in the rear of the queue
+        """
         new_node = Node(value)
 
         # if the queue is empty
@@ -47,6 +53,9 @@ class Queue:
         return dequeue_value
     
     def is_empty(self):
+        """
+        Checks if the queue is empty
+        """
         return self.front is None
     
     def peek(self):
