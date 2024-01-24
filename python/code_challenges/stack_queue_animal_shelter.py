@@ -1,6 +1,7 @@
 from data_structures.queue import Queue
+from data_structures.invalid_operation_error import InvalidOperationError
 
-
+# used ChatGPT to troubleshoot my AnimalShelter class
 class AnimalShelter:
     """
     Instantiates an instance of an animal shelter
@@ -11,21 +12,46 @@ class AnimalShelter:
         self.front = None
         self.rear = None
 
-    def enqueue(self, name, species):
-
-        new_cat = Cat(name, species)
-        new_dog = Dog(name, species)
+    def enqueue(self, animal):
 
         if self.rear is None:
-            self.rear = new_cat or new_dog
-            self.front = new_cat or new_dog
-
+            self.rear = animal
+            self.front = animal
         else:
-            self.rear.next = new_cat or new_dog
-            self.rear = new_cat or new_dog
+            self.rear.next = animal
+            self.rear = animal
 
-    def dequeue():
-        pass
+    # used ChatGPT to help write this logic
+    def dequeue(self, species=None):
+        if self.front is None:
+            raise InvalidOperationError("Shelter is empty")
+
+        if species is None:
+            return None
+
+        # Traverse the queue to find the first animal of the requested species
+        current = self.front
+        previous = None
+
+        while current is not None and current.species != species:
+            previous = current
+            current = current.next
+
+        # If the species is not found
+        if current is None:
+            return None
+
+        # If the animal to dequeue is the first in the queue
+        if previous is None:
+            self.front = current.next
+            if self.front is None:
+                self.rear = None
+        else:
+            previous.next = current.next
+            if previous.next is None:
+                self.rear = previous
+
+        return current
 
 
 class Dog:
