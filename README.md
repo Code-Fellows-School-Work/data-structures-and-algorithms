@@ -7,7 +7,13 @@
 - [Arrary Binary Search](python/docs/array-binary-search/README.md)
 - [Matrix Sum](python/docs/matrix-sum/README.md)
 - [Linked List](python/data_structures/linked_list.py)
-- [Linked List Insertions](python/data_structures/linked_list.py)
+- [Linked List Insertions](python/docs/linked_list_insertions/README.md)
+- [Linked List Kth From End](python/docs/linked_list_insertions/README.md)
+- [Linked List Zip](python/docs/linked_list_zip/README.md)
+- [Stacks](python/data_structures/stack.py)
+- [Queues](python/data_structures/queue.py)
+- [Stack Queue Psuedo](python/docs/stack_queue_pseudo/README.md)
+- [Stack Queue Animal Shelter](python/docs/stack_queue_animal_shelter/README.md)
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
