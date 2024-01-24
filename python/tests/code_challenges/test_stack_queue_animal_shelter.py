@@ -2,31 +2,31 @@ import pytest
 from code_challenges.stack_queue_animal_shelter import AnimalShelter, Dog, Cat
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_single_cat():
     shelter = AnimalShelter()
-    cat = Cat()
+    cat = Cat("Cat_1")
     shelter.enqueue(cat)
     actual = shelter.dequeue("cat")
     expected = cat
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_single_dog():
     shelter = AnimalShelter()
-    dog = Dog()
+    dog = Dog("Dog_1")
     shelter.enqueue(dog)
     actual = shelter.dequeue("dog")
     expected = dog
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_dog_preferred_but_cat_in_front():
     shelter = AnimalShelter()
-    cat = Cat()
-    dog = Dog()
+    cat = Cat("Cat_1")
+    dog = Dog("Dog_1")
     shelter.enqueue(cat)
     shelter.enqueue(dog)
     actual = shelter.dequeue("dog")
@@ -34,11 +34,11 @@ def test_dog_preferred_but_cat_in_front():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_dog_then_cat():
     shelter = AnimalShelter()
-    cat = Cat()
-    dog = Dog()
+    cat = Cat("Cat_1")
+    dog = Dog("Dog_1")
     shelter.enqueue(dog)
     shelter.enqueue(cat)
     shelter.dequeue("dog")
@@ -47,11 +47,11 @@ def test_dog_then_cat():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_bad_pref():
     shelter = AnimalShelter()
-    cat = Cat()
-    dog = Dog()
+    cat = Cat("Cat_1")
+    dog = Dog("Dog_1")
     shelter.enqueue(dog)
     shelter.enqueue(cat)
     shelter.dequeue("dog")
