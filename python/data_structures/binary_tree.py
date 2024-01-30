@@ -80,8 +80,21 @@ class BinaryTree:
     
     def contains(self):
         pass
-        
+    
+    # Used ChatGPT to help write this code. I knew it had to be recusrive but could not figure out how to implement it
+    def find_maximum_value(self):
+        def find_max(node):
 
+            if node is None:
+                return 0
+    
+            left_max = find_max(node.left)
+            right_max = find_max(node.right)
+            return max(node.value, left_max, right_max)
+
+        return find_max(self.root)
+        
+        
 
 class Node:
     def __init__(self, value, left=None, right=None):
