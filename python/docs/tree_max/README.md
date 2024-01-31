@@ -8,4 +8,4 @@ Write an method for the Binary Tree class to find the maximum value. Accepts no 
 The algorithm will need to traverse the entire tree to determine the max value, therefore it's big O(n) for space and time
 
 ## Solution
-Available at: [Stack Queue Animal Shelter](/python/data_structures/binary_tree.py)
+Available at: [Tree Max](/python/data_structures/binary_tree.py)
