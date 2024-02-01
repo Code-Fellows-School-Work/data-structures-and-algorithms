@@ -18,6 +18,7 @@
 - [Binary Tree](python/data_structures/binary_tree.py)
 - [Binary Search Tree](python/data_structures/binary_search_tree.py)
 - [Binary Tree Max](python/data_structures/binary_tree.py)
+- [Tree Breadth First](python/code_challenges/tree_breadth_first.py)
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
