@@ -46,7 +46,7 @@ class Queue:
         # move the front pointer to its next
         self.front = self.front.next
         # the Queue has become empty
-        if self.rear is None:
+        if self.front is None:
             # also need to update self.rear
             self.rear = None
 
@@ -56,7 +56,10 @@ class Queue:
         """
         Checks if the queue is empty
         """
-        return self.front is None
+        if self.front is None:
+            return True
+        else:
+            return False
     
     def peek(self):
         """
