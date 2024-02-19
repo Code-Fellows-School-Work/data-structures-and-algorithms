@@ -18,7 +18,9 @@
 - [Binary Tree](python/data_structures/binary_tree.py)
 - [Binary Search Tree](python/data_structures/binary_search_tree.py)
 - [Binary Tree Max](python/data_structures/binary_tree.py)
+- [Tree Fizz Buzz](python/code_challenges/tree_fizz_buzz.py)
 - [Tree Breadth First](python/code_challenges/tree_breadth_first.py)
+- [Hash Table](python/data_structures/hashtable.py)
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
