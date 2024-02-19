@@ -19,7 +19,7 @@ def test_get_apple():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_internals():
     hashtable = Hashtable(1024)
     hashtable.set("ahmad", 30)

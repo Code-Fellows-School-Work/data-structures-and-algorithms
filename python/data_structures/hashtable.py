@@ -23,7 +23,7 @@ class Hashtable:
 
     def set(self, key, value):
         """
-
+        Adds a new key/value pair to the hash table
         """
         index = self._hash(
             key)  # gets the index value returned from the hash function
@@ -39,9 +39,15 @@ class Hashtable:
         bucket.insert(kv_pair)
 
     def get(self, key):
+        """
+        Searches the hash table and retrieves the value for a given key. If the value doesn't exist, then return a key error
+        """
         # gets the index value returned from the hash function
         index = self._hash(key)
         bucket = self._buckets[index]
+
+        if bucket is None:
+            return None
 
         current = bucket.head  # pulling from linked list terminology
 
@@ -52,10 +58,36 @@ class Hashtable:
 
             current = current.next
 
-        raise KeyError("Unable to find key", key)
+        return None
 
-    def has(self):
-        pass
+    def has(self, key):
+        """
+        Checks the hashtable for a given key and returns a boolean
+        """
+        for bucket in self._buckets: # data type: list of linked lists
+            if bucket: # data type: linked-list
+                current = bucket.head # data-type: nodes
+                kv_pair = current.value
+                if kv_pair[0] == key:
+                    return True
+                
+                current = current.next
+
+        return False
+
 
     def keys(self):
-        pass
+        """
+        Returns a list of keys
+        """
+        key_list = []
+
+        for bucket in self._buckets: # data type: list of linked lists
+            if bucket: # data type: linked-list
+                current = bucket.head # data-type: nodes
+                while current: # loops through the linked list and appends each key to the empty key_list array
+                    kv_pair = current.value
+                    key_list.append(kv_pair[0])
+                    current = current.next
+
+        return key_list
