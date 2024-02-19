@@ -126,6 +126,7 @@ class LinkedList:
             current = current.next
 
         return current.value
+
     
 def zip_lists(list1, list2):
     dummy = Node(None)  # Dummy node to facilitate zipping
