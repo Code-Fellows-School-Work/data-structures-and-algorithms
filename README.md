@@ -21,6 +21,8 @@
 - [Tree Fizz Buzz](python/code_challenges/tree_fizz_buzz.py)
 - [Tree Breadth First](python/code_challenges/tree_breadth_first.py)
 - [Hash Table](python/data_structures/hashtable.py)
+- [Hash Table Repeated Word](python/code_challenges/hashtable_repeated_word.py)
+
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
