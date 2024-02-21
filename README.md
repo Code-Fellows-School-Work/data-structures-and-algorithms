@@ -22,6 +22,7 @@
 - [Tree Breadth First](python/code_challenges/tree_breadth_first.py)
 - [Hash Table](python/data_structures/hashtable.py)
 - [Hash Table Repeated Word](python/code_challenges/hashtable_repeated_word.py)
+- [Binary Tree Intersection](python/code_challenges/tree_intersection.py)
 
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
