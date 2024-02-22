@@ -36,7 +36,7 @@ def test_example_1():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_example_2():
     synonyms = {
         "quick": "fast",
@@ -66,7 +66,7 @@ def test_example_2():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_example_3():
     synonyms = {
         "clear": "transparent",
