@@ -6,8 +6,8 @@ def test_exists():
     assert left_join
 
 
-@pytest.mark.skip("TODO")
-def test_example():
+# @pytest.mark.skip("TODO")
+def test_example_1():
     synonyms = {
         "diligent": "employed",
         "fond": "enamored",
@@ -24,11 +24,67 @@ def test_example():
     }
 
     expected = [
-        ["fond", "enamored", "averse"],
-        ["wrath", "anger", "delight"],
         ["diligent", "employed", "idle"],
-        ["outfit", "garb", "NONE"],
+        ["fond", "enamored", "averse"],
         ["guide", "usher", "follow"],
+        ["outfit", "garb", None],
+        ["wrath", "anger", "delight"]
+    ]
+
+    actual = left_join(synonyms, antonyms)
+
+    assert actual == expected
+
+
+@pytest.mark.skip("TODO")
+def test_example_2():
+    synonyms = {
+        "quick": "fast",
+        "slow": "lethargic",
+        "happy": "joyful",
+        "sad": "sorrowful",
+        "bright": "luminous",
+    }
+    antonyms = {
+        "quick": "slow",
+        "slow": "quick",
+        "happy": "sad",
+        "sad": "happy",
+        "sharp": "dull",
+    }
+
+    expected = [
+        ["quick", "fast", "slow"],
+        ["slow", "lethargic", "quick"],
+        ["happy", "joyful", "sad"],
+        ["sad", "sorrowful", "happy"],
+        ["bright", "luminous", None],
+    ]
+
+    actual = left_join(synonyms, antonyms)
+
+    assert actual == expected
+
+
+@pytest.mark.skip("TODO")
+def test_example_3():
+    synonyms = {
+        "clear": "transparent",
+        "obscure": "unclear",
+        "rich": "wealthy",
+        "poor": "impoverished",
+        "simple": "uncomplicated",
+    }
+    antonyms = {
+
+    }
+
+    expected = [
+        ["clear", "transparent", None],
+        ["obscure", "unclear", None],
+        ["rich", "wealthy", None],
+        ["poor", "impoverished", None],
+        ["simple", "uncomplicated", None],
     ]
 
     actual = left_join(synonyms, antonyms)

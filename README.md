@@ -17,12 +17,13 @@
 - [Stack Queue Brackets](python/docs/stack_queue_brackets/README.md)
 - [Binary Tree](python/data_structures/binary_tree.py)
 - [Binary Search Tree](python/data_structures/binary_search_tree.py)
-- [Binary Tree Max](python/data_structures/binary_tree.py)
-- [Tree Fizz Buzz](python/code_challenges/tree_fizz_buzz.py)
-- [Tree Breadth First](python/code_challenges/tree_breadth_first.py)
+- [Binary Tree Max](python/docs/tree_max/README.md)
+- [Tree Fizz Buzz](python/docs/tree_fizz_buzz/README.md)
+- [Tree Breadth First](python/docs/tree_breadth_first/README.md)
 - [Hash Table](python/data_structures/hashtable.py)
-- [Hash Table Repeated Word](python/code_challenges/hashtable_repeated_word.py)
-- [Binary Tree Intersection](python/code_challenges/tree_intersection.py)
+- [Hash Table Repeated Word](python/docs/hashtable_repeated_word/README.md)
+- [Binary Tree Intersection](python/docs/tree_intersection/README.md)
+- [Hash Table Left Join](python/docs/hashtable_left_join/README.md)
 
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
